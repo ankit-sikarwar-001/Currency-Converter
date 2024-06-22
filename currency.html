@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency-Converter</title>
+    <link rel="stylesheet" href="currency.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <form action="#">
@@ -16,17 +18,37 @@
           </p>
         </div>
         <div id="box_convergence">
-          <div id="To">
-            <p>Converted Amount</p>
+          <div id="From">
+            <p>Amount</p>
+            <div> 
             <div id="fleft">
               <div>
-                <img src="" alt="" />
+                <img src="https://flagsapi.com/US/flat/32.png" alt="" />
               </div>
               <div id="select_div">
-                <select name="options" id="select">
+                <select name="options" class="select">
                   <option value="USD">USD</option>
+                </select>
+              </div>
+            </div>
+            <div id="fright">
+              <input type="number" value="1" />
+            </div>
+            </div>
+          </div>
+          <div id="icon">
+        <i class="fa-solid fa-right-left"></i>
+          </div>
+          <div id="To">
+            <p>Converted Amount</p>
+            <div>
+            <div id="fleft">
+              <div>
+                <img src="https://flagsapi.com/IN/flat/32.png" alt="" />
+              </div>
+              <div id="select_div">
+                <select name="options" class="select">
                   <option value="INR">INR</option>
-                  <option value="AUD">AUD</option>
                 </select>
               </div>
             </div>
@@ -34,21 +56,6 @@
               <input type="text" value="1" />
             </div>
           </div>
-          <div id="fleft">
-              <div>
-                <img src="" alt="" />
-              </div>
-              <div id="select_div">
-                <select name="options" id="select">
-                  <option value="USD">USD</option>
-                  <option value="INR">INR</option>
-                  <option value="AUD">AUD</option>
-                </select>
-              </div>
-            </div>
-            <div id="fright">
-              <input type="text" value="1" />
-            </div>
           </div>
         </div>
         <div id="box_below">
@@ -56,9 +63,11 @@
             <p id = "chng">1 USD = 83.733 INR</p>
         </div>
         <div class="exchange">
-            <input type="submit">
+            <input type="submit" value="Exchange">
         </div>
       </div>
     </form>
+    <script src="code.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -2,3 +2,116 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    background: #ecdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    border-radius: 2rem;
+    margin-top: 7rem;
+    justify-content: center;
+    background: rgb(221, 242, 245);
+    height: 70vmin;
+    width: 50vmin;
+}
+
+#heading {
+    margin-top: 1rem;
+}
+
+#heading,
+#description {
+    color: rgb(97, 97, 141);
+    text-align: center;
+}
+
+#description {
+    max-width: 30vw;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+#From>div,
+#To>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#fleft {
+    display: flex;
+}
+
+#From>p,
+#To>p {
+    font-size: 1.2rem;
+}
+
+select,
+select>option {
+    /* background: rgb(193, 224, 231); */
+    color: rgb(15, 15, 58);
+    border: none;
+    font-size: 1.3rem;
+}
+
+#fleft {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    object-fit: cover;
+}
+
+#fleft>div>img {
+    border-radius: 10rem;
+    object-fit: contain;
+}
+
+#box_convergence {
+    margin: 1rem;
+    margin-top: 2rem;
+    background: white;
+    border-radius: 1rem;
+}
+
+
+#From,
+#To {
+    margin: 1rem;
+    background: white;
+    border-radius: 2rem;
+}
+
+
+input {
+    text-orientation: sideways-right;
+    border-radius: 5px;
+    width: 15vmin;
+    height: 3vmin;
+    font-size: 1rem;
+}
+
+#icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon>i {
+    transform: rotate(90deg);
+    font-size: 1.5rem;
+}
+
+#box_below>p {
+    margin: 1.2rem;
+}
+
+input[type="submit"] {
+    width: 90%;
+    margin: 1rem;
+    background: rgb(193, 231, 250);
+}
