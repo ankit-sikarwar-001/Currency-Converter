@@ -69,8 +69,20 @@ form input {
     width: auto;
 }
 
+#para {
+    margin: 20px;
+    font-size: 1.1rem;
+    font-weight: 540;
+    margin-left: 0;
+}
+
+.amount {
+    display: grid;
+    gap: 20px;
+}
+
 #msg {
-    margin: 2rem 0 2rem 0;
+    margin: 1.5rem 0 2rem 0;
 }
 
 form button {

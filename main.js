@@ -5,6 +5,38 @@ let amount = document.querySelector(".amount input");
 let fromcurr = document.querySelector(".from select");
 let tocurr = document.querySelector(".to select");
 let msg = document.querySelector("#msg");
+let toimg = document.querySelector("#toimg img");
+let fromimg = document.querySelector("#fromimg img");
+let leftinput = document.querySelector("#left input");
+let rightinput = document.querySelector("#right input");
+
+let icon = document.querySelector("#icon");
+icon.addEventListener("click", async (eventt) => {
+  let c = fromcurr.value.toUpperCase();
+  fromcurr.value = tocurr.value.toUpperCase();
+  tocurr.value = c;
+  let d = fromcurr.value;
+  c = countryList[c];
+  d = countryList[d];
+  console.log(c);
+  toimg.src = `https://flagsapi.com/${c}/flat/64.png`;
+  fromimg.src = `https://flagsapi.com/${d}/flat/64.png`;
+
+  //exhange update
+  const URL = `${BASE_URL}/${fromcurr.value.toLowerCase()}.json`;
+  let response = await fetch(URL);
+  let read = await response.json();
+  let data = read[fromcurr.value.toLowerCase()];
+  // console.log(fromcurr.value.toLowerCase(), tocurr.value);
+  console.log(data[tocurr.value.toLowerCase()]);
+  msg.innerText = `1 ${fromcurr.value.toUpperCase()} = ${
+    data[tocurr.value.toLowerCase()]
+  } ${tocurr.value.toUpperCase()}`;
+
+  //input update
+  let temp = leftinput.value;
+  rightinput.value = data[tocurr.value.toLowerCase()] * temp;
+});
 
 for (let select of dropdowns) {
   for (const currcode in countryList) {
@@ -43,4 +75,6 @@ btn.addEventListener("click", async (evt) => {
   msg.innerText = `1 ${fromcurr.value.toUpperCase()} = ${
     data[tocurr.value.toLowerCase()]
   } ${tocurr.value.toUpperCase()}`;
+  let temp = leftinput.value;
+  rightinput.value = data[tocurr.value.toLowerCase()] * temp;
 });
