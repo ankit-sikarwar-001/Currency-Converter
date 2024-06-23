@@ -77,8 +77,14 @@ form input {
 }
 
 .amount {
-    display: grid;
-    gap: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.amount>#left>input,
+.amount>#right>input {
+    width: 90%;
 }
 
 #msg {
